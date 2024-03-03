@@ -1,0 +1,35 @@
+@use 'sass:list';
+@use 'sass:math';
+
+// The base value for rem calculations
+$rem-base: 16px;
+
+// Function to strip the unit from a value
+@function strip-unit($value) {
+  @return math.div($value, $value * 0 + 1);
+}
+
+// Convert a pixel value to rem
+@function convert-to-rem($value, $base-value: $rem-base, $limit: true) {
+  // Return small values as is, with px unit
+  @if abs($value) < 8 and $limit {
+    @return $value * 1px;
+  }
+
+  // Convert to rem unit
+  $value: math.div(strip-unit($value), strip-unit($base-value)) * 1rem;
+  @return $value;
+}
+
+// Convert a list of pixel values to rem
+@function rem($values, $limit: true, $base-value: $rem-base) {
+  $rem-values: ();
+
+  // Convert each value in the list
+  @each $value in $values {
+    $converted-value: convert-to-rem($value, $base-value, $limit);
+    $rem-values: list.append($rem-values, $converted-value);
+  }
+
+  @return $rem-values;
+}
