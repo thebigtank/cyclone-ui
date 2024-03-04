@@ -72,7 +72,7 @@ table {
   font-family: "Proza Libre", sans-serif;
   position: relative;
   height: 100vh;
-  min-height: 900px;
+  min-height: 950px;
 }
 .block.hero .hero-slider.one {
   width: 100%;
@@ -80,14 +80,22 @@ table {
   position: absolute;
   z-index: -1;
 }
+.block.hero .hero-slider.one::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 .block.hero .hero-slider.one figure {
   height: 100%;
 }
 .block.hero .hero-slider.one figure img {
   height: 100%;
   width: 100%;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: top;
+     object-position: top;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -141,6 +149,9 @@ table {
 .block.hero header .bottom .menu-item a:hover {
   border-bottom: 2px solid #2a2927;
 }
+.block.hero header .bottom .search {
+  cursor: pointer;
+}
 .block.hero header .bottom .search i {
   font-size: 1.375rem;
 }
@@ -169,7 +180,7 @@ table {
 .block.hero .hero-slider.two .slide .indicator {
   display: block;
   margin-bottom: 3.75rem;
-  font-size: 2rem;
+  font-size: 1.875rem;
   font-weight: 600;
 }
 .block.hero .hero-slider.two .slide .slide-title {
@@ -195,9 +206,36 @@ table {
 .block.hero .hero-slider.two .slide .focused.lem::after {
   background-color: #fffd8e;
 }
+.block.hero .hero-slider.two .slide .slide-description {
+  color: #FFFFFF;
+}
+.block.hero .hero-slider.two .slide .slide-description span {
+  display: block;
+}
+.block.hero .hero-slider.two .slide .small-title {
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: 1.875rem;
+  font-weight: 500;
+  margin-bottom: 0.875rem;
+}
+.block.hero .hero-slider.two .slide .small-title q {
+  color: #fffd8e;
+  font-style: normal;
+}
+.block.hero .hero-slider.two .slide .e-date {
+  font-size: 0.9375rem;
+  font-family: "Proza Libre", sans-serif;
+  text-transform: uppercase;
+}
 .block.hero .anchor-down {
   position: absolute;
   bottom: 3.75rem;
   left: 50%;
   transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fffd8e;
+  font-size: 2.25rem;
 }/*# sourceMappingURL=style.css.map */
