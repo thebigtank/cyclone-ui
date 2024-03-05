@@ -18,7 +18,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            // background-color: fade-out($charcoal-gray, 0.8);
         }
         
         figure {
@@ -32,99 +31,9 @@
         }
     }
 
-    header {
-        
-        .top {
-            padding: rem(25) 0;
-            border-bottom: 1px solid fade-out($charcoal-gray, 0.6);
-
-            .row {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .logo {
-                text-transform: uppercase;
-                text-decoration: none;
-                font-family: $proza-libre;
-                font-size: rem(24);
-                font-weight: 600;
-                color: $charcoal-gray;
-            }
-
-            .date {
-                text-transform: capitalize;
-                font-size: rem(14);
-            }
-        }
-
-        .bottom {
-            padding: rem(20) 0;
-            border-bottom: 1px solid fade-out($charcoal-gray, 0.6);
-
-            .row {
-                display: flex;
-                justify-content: space-between;
-            }
-
-            nav {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                flex: 2;
-            }
-
-            .menu {
-                display: flex;
-                gap: rem(32);
-
-                &-item {
-                    a {
-                        text-transform: capitalize;
-                        text-decoration: none;
-                        color: $charcoal-gray;
-                        padding-bottom: rem(1);
-                        border-bottom: rem(2) solid transparent;
-                        transition: border-bottom 250ms ease-in-out;
-
-                        &:hover {
-                            border-bottom: rem(2) solid $charcoal-gray;
-                        }
-                    }
-                }
-            }
-
-            .search {
-                cursor: pointer;
-                i {
-                    font-size: rem(22);
-                }
-            }
-
-            .social {
-                flex: 1;
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                gap: rem(22);
-
-                .label {
-                    text-transform: capitalize;
-                }
-
-                .link {
-                    text-decoration: none;
-                    color: $charcoal-gray;
-                    font-size: rem(20);
-                }
-            }
-        }
-    }
-
     .hero-slider.two {
         text-align: center;
-        padding: rem(100) 0;
+        padding: rem(250) 0 rem(100);
         
         .slide {
             font-family: $cormorant-garamond;
@@ -193,8 +102,10 @@
     }
 
     .anchor-down {
+        width: rem(40);
+        height: rem(40);
         position: absolute;
-        bottom: rem(60);
+        bottom: 40px;
         left: 50%;
         transform: translate(-50%, -50%);
         background: none;
@@ -202,5 +113,10 @@
         cursor: pointer;
         color: $light-yellow;
         font-size: rem(36);
+
+        svg {
+            width: 100%;
+            height: 100%;        
+        }
     }
 }

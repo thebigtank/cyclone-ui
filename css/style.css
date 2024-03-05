@@ -9,9 +9,16 @@ body {
 }
 
 .wrapper {
-  max-width: 1140px;
+  position: relative;
+  max-width: 1200px;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.row {
+  padding: 1.25rem 0;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -68,6 +75,82 @@ table {
   border-spacing: 0;
 }
 
+.block.header {
+  font-family: "Proza Libre", sans-serif;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.block.header .top {
+  border-bottom: 1px solid rgba(42, 41, 39, 0.4);
+}
+.block.header .top .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.block.header .top .logo {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Proza Libre", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2a2927;
+}
+.block.header .top .date {
+  text-transform: capitalize;
+  font-size: 0.875rem;
+}
+.block.header .bottom {
+  border-bottom: 1px solid rgba(42, 41, 39, 0.4);
+}
+.block.header .bottom .row {
+  display: flex;
+  justify-content: space-between;
+}
+.block.header .bottom nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 2.5;
+}
+.block.header .bottom .menu {
+  display: flex;
+  gap: 2.375rem;
+}
+.block.header .bottom .menu-item a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #2a2927;
+  padding-bottom: 1px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 250ms ease-in-out;
+}
+.block.header .bottom .menu-item a:hover {
+  border-bottom: 2px solid #2a2927;
+}
+.block.header .bottom .search {
+  cursor: pointer;
+}
+.block.header .bottom .search i {
+  font-size: 1.375rem;
+}
+.block.header .bottom .social {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.375rem;
+}
+.block.header .bottom .social .label {
+  text-transform: capitalize;
+}
+.block.header .bottom .social .link {
+  text-decoration: none;
+  color: #2a2927;
+  font-size: 1.25rem;
+}
+
 .block.hero {
   font-family: "Proza Libre", sans-serif;
   position: relative;
@@ -94,85 +177,12 @@ table {
 .block.hero .hero-slider.one figure img {
   height: 100%;
   width: 100%;
-  -o-object-position: top;
-     object-position: top;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.block.hero header .top {
-  padding: 1.5625rem 0;
-  border-bottom: 1px solid rgba(42, 41, 39, 0.4);
-}
-.block.hero header .top .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.block.hero header .top .logo {
-  text-transform: uppercase;
-  text-decoration: none;
-  font-family: "Proza Libre", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #2a2927;
-}
-.block.hero header .top .date {
-  text-transform: capitalize;
-  font-size: 0.875rem;
-}
-.block.hero header .bottom {
-  padding: 1.25rem 0;
-  border-bottom: 1px solid rgba(42, 41, 39, 0.4);
-}
-.block.hero header .bottom .row {
-  display: flex;
-  justify-content: space-between;
-}
-.block.hero header .bottom nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex: 2;
-}
-.block.hero header .bottom .menu {
-  display: flex;
-  gap: 2rem;
-}
-.block.hero header .bottom .menu-item a {
-  text-transform: capitalize;
-  text-decoration: none;
-  color: #2a2927;
-  padding-bottom: 1px;
-  border-bottom: 2px solid transparent;
-  transition: border-bottom 250ms ease-in-out;
-}
-.block.hero header .bottom .menu-item a:hover {
-  border-bottom: 2px solid #2a2927;
-}
-.block.hero header .bottom .search {
-  cursor: pointer;
-}
-.block.hero header .bottom .search i {
-  font-size: 1.375rem;
-}
-.block.hero header .bottom .social {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1.375rem;
-}
-.block.hero header .bottom .social .label {
-  text-transform: capitalize;
-}
-.block.hero header .bottom .social .link {
-  text-decoration: none;
-  color: #2a2927;
-  font-size: 1.25rem;
+  object-position: top;
+  object-fit: cover;
 }
 .block.hero .hero-slider.two {
   text-align: center;
-  padding: 6.25rem 0;
+  padding: 15.625rem 0 6.25rem;
 }
 .block.hero .hero-slider.two .slide {
   font-family: "Cormorant Garamond", sans-serif;
@@ -229,8 +239,10 @@ table {
   text-transform: uppercase;
 }
 .block.hero .anchor-down {
+  width: 2.5rem;
+  height: 2.5rem;
   position: absolute;
-  bottom: 3.75rem;
+  bottom: 40px;
   left: 50%;
   transform: translate(-50%, -50%);
   background: none;
@@ -238,4 +250,10 @@ table {
   cursor: pointer;
   color: #fffd8e;
   font-size: 2.25rem;
-}/*# sourceMappingURL=style.css.map */
+}
+.block.hero .anchor-down svg {
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

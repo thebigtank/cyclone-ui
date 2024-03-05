@@ -1,0 +1,91 @@
+.block.header {
+    font-family: $proza-libre;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    
+    .top {
+        border-bottom: 1px solid fade-out($charcoal-gray, 0.6);
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: $proza-libre;
+            font-size: rem(24);
+            font-weight: 600;
+            color: $charcoal-gray;
+        }
+
+        .date {
+            text-transform: capitalize;
+            font-size: rem(14);
+        }
+    }
+
+    .bottom {
+        border-bottom: 1px solid fade-out($charcoal-gray, 0.6);
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 2.5;
+        }
+
+        .menu {
+            display: flex;
+            gap: rem(38);
+
+            &-item {
+                a {
+                    text-transform: capitalize;
+                    text-decoration: none;
+                    color: $charcoal-gray;
+                    padding-bottom: rem(1);
+                    border-bottom: rem(2) solid transparent;
+                    transition: border-bottom 250ms ease-in-out;
+
+                    &:hover {
+                        border-bottom: rem(2) solid $charcoal-gray;
+                    }
+                }
+            }
+        }
+
+        .search {
+            cursor: pointer;
+            i {
+                font-size: rem(22);
+            }
+        }
+
+        .social {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: rem(22);
+
+            .label {
+                text-transform: capitalize;
+            }
+
+            .link {
+                text-decoration: none;
+                color: $charcoal-gray;
+                font-size: rem(20);
+            }
+        }
+    }
+}
